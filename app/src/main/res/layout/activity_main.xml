@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="610dp"
+        android:text="InvestMore"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/Enunciado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O valor bruto recebido será de:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Titulo"
+        app:layout_constraintVertical_bias="0.048" />
+
+    <TextView
+        android:id="@+id/ValorTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Enunciado"
+        app:layout_constraintVertical_bias="0.053" />
+
+    <TextView
+        android:id="@+id/TextRendimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor rendimento:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ValorTotal"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/ValorRendimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextRendimento"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <TextView
+        android:id="@+id/AporteInicial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aporte Inicial"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ValorRendimento"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputAP.Inicial"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AporteInicial">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_APInicial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ex: 1500.00" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/AporteMes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aporte Mensal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputAP.Inicial"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputAp.Mes"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AporteMes">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_MensalAporte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ex: 250.00" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/NumMeses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qtde. Meses"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputAp.Mes"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputQtd.Mes"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/NumMeses">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_Meses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ex: 12" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/Juros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Juros"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputQtd.Mes"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextInputJuros"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toBottomOf="@id/Juros"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_juros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ex: 1.2" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_Calcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.821"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <Button
+        android:id="@+id/btn_Limpar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Limpar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+</androidx.constraintlayout.widget.ConstraintLayout>
