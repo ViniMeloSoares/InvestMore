@@ -88,6 +88,7 @@
         android:id="@+id/textInputAP.Inicial"
         android:layout_width="300dp"
         android:layout_height="48dp"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/AporteInicial">
@@ -96,6 +97,7 @@
             android:id="@+id/edt_APInicial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
             android:hint="Ex: 1500.00" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -115,6 +117,7 @@
         android:id="@+id/textInputAp.Mes"
         android:layout_width="300dp"
         android:layout_height="48dp"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/AporteMes">
@@ -123,6 +126,7 @@
         android:id="@+id/edt_MensalAporte"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
         android:hint="Ex: 250.00" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -142,6 +146,7 @@
         android:id="@+id/textInputQtd.Mes"
         android:layout_width="300dp"
         android:layout_height="48dp"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/NumMeses">
@@ -150,6 +155,8 @@
         android:id="@+id/edt_Meses"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:maxLength="3"
         android:hint="Ex: 12" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -169,6 +176,7 @@
         android:id="@+id/TextInputJuros"
         android:layout_width="300dp"
         android:layout_height="48dp"
+        app:hintEnabled="false"
         app:layout_constraintTop_toBottomOf="@id/Juros"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -177,6 +185,8 @@
         android:id="@+id/edt_juros"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:maxLength="4"
         android:hint="Ex: 1.2" />
 
     </com.google.android.material.textfield.TextInputLayout>
