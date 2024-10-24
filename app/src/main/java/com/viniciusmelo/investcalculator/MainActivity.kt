@@ -30,6 +30,8 @@ class MainActivity : AppCompatActivity() {
     val formatoReal = NumberFormat.getCurrencyInstance(Locale("pt", "BR"))
 
 
+
+
     btn_calcular.setOnClickListener {
 
     val ApInicialSpring = edt_AporteInicial.text.toString()
@@ -52,7 +54,24 @@ class MainActivity : AppCompatActivity() {
 
       val resultado = aporteInicial*(1+JurosDecimal).pow(Periodo) + (aporteMes*((1+JurosDecimal).pow(Periodo)-1))/JurosDecimal
       val valorfinal = findViewById<TextView>(R.id.ValorTotal)
+      val rendimentofinal = findViewById<TextView>(R.id.ValorRendimento)
+      val totalAportesMes = (aporteMes*Periodo)
+      val totalaportes = (aporteInicial + totalAportesMes)
+      val rendimento = (resultado - totalaportes)
+
       valorfinal.text = formatoReal.format(resultado)
+      rendimentofinal.text = formatoReal.format(rendimento)
+
+        btn_limpar.setOnClickListener{
+            edt_AporteInicial.text?.clear()
+            edt_AporteMes.text?.clear()
+            edt_Periodo.text?.clear()
+            edt_Juros.text?.clear()
+            valorfinal.text ="R$ 0.0"
+            rendimentofinal.text = "R$ 0.0"
+
+
+        }
 
       }
     }
