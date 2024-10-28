@@ -6,7 +6,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/Gray">
+
 
     <TextView
         android:id="@+id/Titulo"
@@ -15,47 +17,52 @@
         android:layout_marginTop="30dp"
         android:layout_marginBottom="610dp"
         android:text="InvestMore"
-        android:textSize="30dp"
-        android:textStyle="bold"
+        android:textSize="26dp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.016" />
 
     <TextView
         android:id="@+id/Enunciado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="O valor bruto recebido será de:"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Titulo"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.048"
+        android:layout_marginBottom="300dp"/>
 
     <TextView
         android:id="@+id/ValorTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0.0"
+        android:text="R$ 0,00"
+        android:textColor="@color/white"
+        android:textSize="26dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Enunciado"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.01" />
 
     <TextView
         android:id="@+id/TextRendimento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Valor rendimento:"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ValorTotal"
         app:layout_constraintVertical_bias="0.022" />
@@ -64,19 +71,23 @@
         android:id="@+id/ValorRendimento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0.0"
+        android:text="R$ 0,00"
+        android:textColor="@color/Green"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextRendimento"
-        app:layout_constraintVertical_bias="0.03" />
+        app:layout_constraintVertical_bias="0.01" />
 
     <TextView
         android:id="@+id/AporteInicial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Aporte Inicial"
+        android:text="Aporte inicial"
+        android:textColor="@color/white"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.031"
@@ -86,12 +97,16 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputAP.Inicial"
-        android:layout_width="300dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         app:hintEnabled="false"
+        android:background="@drawable/text_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/AporteInicial">
+        app:layout_constraintTop_toBottomOf="@id/AporteInicial"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="170dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edt_APInicial"
@@ -99,14 +114,20 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:hint="Ex: 1500.00"
-            android:textSize="13sp"/>
+            android:background="@drawable/text_layout"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="16dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/AporteMes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Aporte Mensal"
+        android:text="Aporte mensal"
+        android:textColor="@color/white"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.031"
@@ -116,12 +137,16 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputAp.Mes"
-        android:layout_width="300dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         app:hintEnabled="false"
+        android:background="@drawable/text_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/AporteMes">
+        app:layout_constraintTop_toBottomOf="@id/AporteMes"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="170dp">
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edt_MensalAporte"
@@ -129,14 +154,20 @@
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:hint="Ex: 250.00"
-        android:textSize="13sp"/>
+        android:background="@drawable/text_layout"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textStyle="bold"
+        android:textSize="16dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/NumMeses"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Qtde. Meses"
+        android:text="Qtde. meses"
+        android:textColor="@color/white"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.031"
@@ -146,28 +177,38 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputQtd.Mes"
-        android:layout_width="300dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         app:hintEnabled="false"
+        app:background="@drawable/text_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/NumMeses">
+        app:layout_constraintTop_toBottomOf="@id/NumMeses"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="170dp">
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edt_Meses"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@drawable/text_layout"
+        android:textStyle="bold"
         android:inputType="numberDecimal"
         android:maxLength="3"
         android:hint="Ex: 12"
-        android:textSize="13sp"/>
+        android:textSize="16dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/Juros"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Juros"
+        android:text="Juros ao mês %"
+        android:textColor="@color/white"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.042"
@@ -177,45 +218,65 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/TextInputJuros"
-        android:layout_width="300dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         app:hintEnabled="false"
         app:layout_constraintTop_toBottomOf="@id/Juros"
+        android:background="@drawable/text_layout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="170dp">
 
         <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edt_juros"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
+        android:background="@drawable/text_layout"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textStyle="bold"
         android:maxLength="4"
         android:hint="Ex: 1.2"
-        android:textSize="13sp" />
+        android:textSize="16dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <Button
         android:id="@+id/btn_Calcular"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Calcular"
+        android:background="@drawable/botao_calcular"
+        app:backgroundTint="@null"
+        app:backgroundTintMode="src_over"
+        android:textColor="@color/black"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.821"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintStart_toEndOf="@id/btn_Limpar"/>
+    
 
     <Button
         android:id="@+id/btn_Limpar"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Limpar"
+        android:background="@drawable/botao_limpar"
+        app:backgroundTint="@null"
+        app:backgroundTintMode="src_over"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/Green"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.246"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintEnd_toStartOf="@id/btn_Calcular"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

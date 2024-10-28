@@ -1,19 +1,20 @@
 package com.viniciusmelo.investcalculator
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import java.text.NumberFormat
 import java.util.Locale
 import kotlin.math.pow
 
+
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -28,8 +29,6 @@ class MainActivity : AppCompatActivity() {
     val btn_calcular = findViewById<Button>(R.id.btn_Calcular)
     val btn_limpar = findViewById<Button>(R.id.btn_Limpar)
     val formatoReal = NumberFormat.getCurrencyInstance(Locale("pt", "BR"))
-
-
 
 
     btn_calcular.setOnClickListener {
@@ -67,8 +66,8 @@ class MainActivity : AppCompatActivity() {
             edt_AporteMes.text?.clear()
             edt_Periodo.text?.clear()
             edt_Juros.text?.clear()
-            valorfinal.text ="R$ 0.0"
-            rendimentofinal.text = "R$ 0.0"
+            valorfinal.text ="R$ 0,00"
+            rendimentofinal.text = "R$ 0,00"
 
 
         }
